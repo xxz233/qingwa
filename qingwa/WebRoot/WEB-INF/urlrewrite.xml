@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN" "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+	<rule>
+		<note>首页</note>
+		<from>^/index.html$</from>
+		<to>/</to>
+	</rule>
+	<rule>
+		<note>注册</note>
+		<from>^/registe.html$</from>
+		<to>/web/registe.jsp</to>
+	</rule>
+	<rule>
+		<note>注册验证</note>
+		<from>^/validate/(.+).html$</from>
+		<to>/web/userAction_validate?code=$1</to>
+	</rule>
+	<rule>
+		<note>去邮箱</note>
+		<from>^/go_email/(.+)/go_email.html$</from>
+		<to>/web/go_email.jsp?email=$1</to>
+	</rule>
+	
+	<!-- 公司注册后自动跳转到开通招聘服务步骤 -->
+	<rule>
+		<note>开通招聘服务第一步</note>
+		<from>^/company/bind/step/1.html$</from>
+		<to>/web/user/company_bind_step1.jsp</to>
+	</rule>
+	
+	<!-- 完善公司信息步骤 -->
+	<rule>
+		<note>完善公司信息第一步</note>
+		<from>^/company/info/step/1.html$</from>
+		<to>/web/user/company_info_step1.jsp</to>
+	</rule>
+	
+	
+	
+	<rule>
+		<note>登录</note>
+		<from>^/login.html</from>
+		<to>/web/login.jsp</to>
+	</rule>
+	<rule>
+		<note>职位</note>
+		<from>^/job.html</from>
+		<to>/web/job.jsp</to>
+	</rule>
+	<rule>
+		<note>公司</note>
+		<from>^/company.html</from>
+		<to>/web/company.jsp</to>
+	</rule>
+	<rule>
+		<note>蛙塘</note>
+		<from>^/watang.html</from>
+		<to>/web/watang.jsp</to>
+	</rule>
+	<rule>
+		<note>我的公司</note>
+		<from>^/my_company.html</from>
+		<to>/web/user/my_company.jsp</to>
+	</rule>
+	<rule>
+		<note>发布职位</note>
+		<from>^/creat_job.html</from>
+		<to>/web/user/creat_job.jsp</to>
+	</rule>
+	
+	
+	
+	<rule>
+		<note>我的简历</note>
+		<from>^/resume.html$</from>
+		<to>/web/user/resume.jsp</to>
+	</rule>
+</urlrewrite>

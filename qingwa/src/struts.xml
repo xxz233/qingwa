@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 注意前台和后台在不同的命名空间下 -->
+	<!-- 管理员登录、管理管理员 -->
+	<package name="admin" namespace="/manage" extends="struts-default">
+		<action name="adminActionManage_*" class="adminActionManage" method="{1}">
+			<result name="update">/manage/admin/update.jsp</result>
+		</action>
+		<action name="manageMenuActionManage_*" class="manageMenuActionManage" method="{1}"></action>
+	</package>
+	<!-- 网站配置相关 -->
+	<package name="manageConfig" namespace="/manage" extends="struts-default">
+		
+	</package>
+	<!-- 管理职场资讯 -->
+	<package name="manageArticle" namespace="/manage" extends="struts-default">
+		
+	</package>
+	<!-- 管理公司 -->
+	<package name="manageCompany" namespace="/manage" extends="struts-default">
+		<action name="companyInfoActionManage_*" class="companyInfoActionManage" method="{1}">
+			<result  name="list"  >manage/validate/list.jsp</result>
+		</action>
+	</package>
+	<!-- 管理个人 -->
+	<package name="managePerson" namespace="/manage" extends="struts-default">
+		<action name="userActionManage_*" class="userActionManage" method="{1}">
+			<result name="content">/manage/user/content.jsp</result>
+		</action>
+	</package>
+	<!-- 广告管理 -->
+	<package name="manageAdvertisement" namespace="/manage" extends="struts-default">
+	</package>
+	
+	<!-- 前台 -->
+	<!-- 用户登录 和注册-->
+	<package name="user" namespace="/web" extends="struts-default">
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="index" type="redirect">/index.html</result>
+		</action>
+	</package>
+	<!-- 界面相关 -->
+	<package name="face" namespace="/web" extends="struts-default">
+		<action name="jobTypeAction_*" class="jobTypeAction" method="{1}"></action>
+		<action name="personalMenuAction_*" class="personalMenuAction" method="{1}"></action>
+		<action name="webMenuAction_*" class="webMenuAction" method="{1}"></action>
+	</package>
+	<!-- 网站配置相关 -->
+	<package name="config" namespace="/web" extends="struts-default">
+		<action name="configAction_*" class="configAction" method="{1}"></action>
+	</package>
+	<!-- 职场资讯 -->
+	<package name="article" namespace="/web" extends="struts-default">
+		
+	</package>
+	<!-- 公司 -->
+	<package name="company" namespace="/web" extends="struts-default">
+		
+	</package>
+	<!-- 个人 -->
+	<package name="person" namespace="/web" extends="struts-default">
+		<action name="user_*" class="userAction" method="{1}"></action>
+		<action name="resume_*" class="resumeAction" method="{1}"></action>
+		<action name="current_*" class="currentAction" method="{1}"></action>
+		<action name="degree_*" class="degreeAction" method="{1}"></action>
+		<action name="personalExperience_*" class="personalExperienceAction" method="{1}"></action>
+		<action name="area_*" class="areaAction" method="{1}"></action>
+		<action name="companyJobNature_*" class="companyJobNatureAction" method="{1}"></action>
+		<action name="personalSalary_*" class="personalSalaryAction" method="{1}"></action>
+	</package>
+	<!-- 广告 -->
+	<package name="advertisement" namespace="/web" extends="struts-default">
+	</package>
+</struts>    
